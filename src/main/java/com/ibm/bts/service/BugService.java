@@ -1,7 +1,5 @@
 package com.ibm.bts.service;
 
-
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -18,6 +16,7 @@ import com.ibm.bts.repo.BugRepository;
 public class BugService {
 	@Autowired
 	BugRepository bugRepository;
+
 	public String createBug(Bug bug) {
 		Bug savedBug = bugRepository.save(bug);
 		return savedBug.getId();
@@ -36,7 +35,7 @@ public class BugService {
 	}
 
 	public void deleteBug(String bugId) {
-		bugRepository.deleteById(bugId);;
+		bugRepository.deleteById(bugId);
 	}
 
 }
